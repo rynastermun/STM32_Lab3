@@ -1,0 +1,25 @@
+/*
+ * global.h
+ *
+ *  Created on: Nov 21, 2024
+ *      Author: ADMIN PC
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "main.h"
+#include "button.h"
+#include "led.h"
+#include "software_timer.h"
+
+//Biến khoảng thời gian chạy đèn led
+extern int status, red_duration, yellow_duration, green_duration;
+
+//Biến buffer led 7 đoạn
+extern int buffer_7seg[4];
+
+//Thời gian scan led 7 đoạn
+#define SCAN_DURATION 300
+
+#endif /* INC_GLOBAL_H_ */

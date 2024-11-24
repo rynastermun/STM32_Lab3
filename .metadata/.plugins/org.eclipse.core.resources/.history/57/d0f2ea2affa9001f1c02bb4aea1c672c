@@ -1,0 +1,22 @@
+/*
+ * global.h
+ *
+ *  Created on: Nov 21, 2024
+ *      Author: ADMIN PC
+ */
+
+#ifndef INC_FSM_PROCESSING_H_
+#define INC_FSM_PROCESSING_H_
+
+#include "main.h"
+#include "button.h"
+#include "led.h"
+#include "software_timer.h"
+
+//Các Mode
+#define INIT 		0
+#define NORMAL_MODE 1
+#define RED_MODE 	2
+#define YELLOW_MODE 3
+#define GREEN_MODE 	4
+#endif /* INC_FSM_PROCESSING_H_ */

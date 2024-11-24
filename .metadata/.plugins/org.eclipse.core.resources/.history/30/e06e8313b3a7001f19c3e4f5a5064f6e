@@ -1,0 +1,47 @@
+/*
+ * button.c
+ *
+ *  Created on: Nov 21, 2024
+ *      Author: ADMIN PC
+ */
+#include "button.h"
+
+int KeyReg[3][3]; // Mảng lưu trạng thái của 3 nút, mỗi nút có 3 trạng thái
+int ButtonFlag[3] = {0, 0, 0}; // Cờ trạng thái cho 3 nút
+
+void normalButton(){
+	//KHỞI TẠO CỜ VÀ TRẠNG THÁI CÁC NÚT
+	for (int i = 0; i < 3; i++) {
+	        ButtonFlag[i] = 0;
+	        for (int j = 0; j < 3; j++) {
+	            KeyReg[i][j] = NORMAL_STATE;
+	        }
+	    }
+}
+
+//KIỂM TRA NÚT MODE NẾU ĐƯỢC NHẤN
+int isModePressed() {
+    if (ButtonFlag[MODE] == 1) {
+        ButtonFlag[MODE] = 0;
+        return 1;
+    }
+    return 0;
+}
+
+//KIỂM TRA NÚT DURATION NẾU ĐƯỢC NHẤN
+int isDurationPressed() {
+    if (ButtonFlag[DURATION] == 1) {
+        ButtonFlag[DURATION] = 0;
+        return 1;
+    }
+    return 0;
+}
+
+//KIỂM TRA NÚT SET NẾU ĐƯỢC NHẤN
+int isSetPressed() {
+    if (ButtonFlag[SET] == 1) {
+        ButtonFlag[SET] = 0;
+        return 1;
+    }
+    return 0;
+}

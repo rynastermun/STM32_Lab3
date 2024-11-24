@@ -1,0 +1,25 @@
+/*
+ * hardware.h
+ *
+ *  Created on: Nov 20, 2024
+ *      Author: ADMIN PC
+ */
+
+#ifndef INC_LED_H_
+#define INC_LED_H_
+
+#include "global.h"
+
+//hiển thị led 7 đoạn
+void display7SEG(int num);
+void scan_7seg();
+
+//bật tắt đèn giao thông
+void led_on(int pin);
+void led_off(int pin);
+
+//nhấp nháy đèn giao thông
+void blink_red();
+void blink_amber();
+void blink_green();
+#endif /* INC_LED_H_ */

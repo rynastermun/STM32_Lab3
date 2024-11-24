@@ -1,0 +1,44 @@
+/*
+ * fsm_processing.c
+ *
+ *  Created on: Nov 23, 2024
+ *      Author: ADMIN PC
+ */
+
+#include "fsm_processing.h"
+
+enum TypeOfMode{STATE_INIT, MODE1, MODE2, MODE3, MODE4};
+enum TypeOfMode MODE = STATE_INIT;
+
+//Biến status để lưu trạng thái đèn giao thông: 0(đỏ), 1(vàng), 2(xanh)
+int status1 = 0;
+int status2 = 2;
+
+//Biến count để đếm ngược thời gian
+int count1 = 0;
+int count2 = 0;
+int Index = 0;
+
+//Biến thời gian hiển thị đèn giao thông
+int redTime = 5;
+int amberTime = 2;
+int greenTime = 3;
+
+void fsm_processing(){
+	//Tăng Mode khi nút Mode được nhấn
+	switch(MODE){
+	case STATE_INIT:
+		if (timer3_flag == 1)
+		{
+			getKeyInput();
+			setTimer3(10);
+		}
+		if (isModePressed() == 1)
+		{
+			MODE = MODE1;
+			Index = 0;
+			break;
+		}
+
+	}
+}
