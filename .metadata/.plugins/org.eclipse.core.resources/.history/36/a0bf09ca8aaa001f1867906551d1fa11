@@ -15,12 +15,6 @@
 #define PRESSED_STATE GPIO_PIN_RESET
 #define LONG_PRESS 200
 
-//SỐ LƯỢNG NÚT VÀ NHÃN CÁC NÚT
-#define NUM_OF_BUTTON 3
-#define Select 0
-#define Duration 1
-#define Set 2
-
 void initialButton();
 int isSelectPressed();
 int isDurationPressed();

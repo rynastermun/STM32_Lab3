@@ -143,7 +143,7 @@ Discarded input sections
  .data.greenTime
                 0x0000000000000000        0x4 ./Core/Src/fsm_processing.o
  .text.fsm_processing
-                0x0000000000000000      0x560 ./Core/Src/fsm_processing.o
+                0x0000000000000000      0x504 ./Core/Src/fsm_processing.o
  .debug_info    0x0000000000000000      0x2ef ./Core/Src/fsm_processing.o
  .debug_abbrev  0x0000000000000000       0xde ./Core/Src/fsm_processing.o
  .debug_aranges
@@ -189,7 +189,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x2e ./Core/Src/fsm_processing.o
  .debug_macro   0x0000000000000000       0x2e ./Core/Src/fsm_processing.o
  .debug_macro   0x0000000000000000       0x10 ./Core/Src/fsm_processing.o
- .debug_line    0x0000000000000000      0x8e5 ./Core/Src/fsm_processing.o
+ .debug_line    0x0000000000000000      0x8b0 ./Core/Src/fsm_processing.o
  .debug_str     0x0000000000000000    0x7fc4a ./Core/Src/fsm_processing.o
  .comment       0x0000000000000000       0x54 ./Core/Src/fsm_processing.o
  .debug_frame   0x0000000000000000       0x2c ./Core/Src/fsm_processing.o

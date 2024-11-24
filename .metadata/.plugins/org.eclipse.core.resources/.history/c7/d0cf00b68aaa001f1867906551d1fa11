@@ -221,9 +221,26 @@ void fsm_processing(){
 			getKeyInput();
 			setTimer3(10);
 		}
-		//Khi nhấn nút Mode sẽ chuyển về STATE_INIT
+		//Khi nhấn nút Mode sẽ chuyển 1 trong 2 trạng thái
 		if(isSelectPressed() == 1){
-			MODE = STATE_INIT;
+			//Nếu thời gian đèn đỏ = đèn vàng + đèn xanh thì trả về chế độ normal
+			if(redTime == greenTime + amberTime){
+				MODE = MODE1;
+				led_off(RED0);
+				led_off(RED1);
+				led_off(GREEN0);
+				led_off(GREEN1);
+				led_off(AMBER0);
+				led_off(AMBER1);
+			}
+			//Nếu không sẽ trả chế độ ban đầu và khi nhấn nút MODE sẽ cài đặt lại ở led đỏ
+			else{
+				MODE = STATE_INIT;
+				if(MODE == STATE_INIT && isSelectPressed() == 1){
+					MODE = MODE1;
+				}
+			break;
+			}
 		}
 		//Khi nhấn nút Duration sẽ cộng thời gian cho led xanh
 		if(isDurationPressed() == 1){
