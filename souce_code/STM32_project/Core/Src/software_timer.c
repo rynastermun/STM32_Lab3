@@ -29,9 +29,9 @@ void setTimer2(int duration)
 	timer2_flag = 0;
 }
 
-void setTimer3()
+void setTimer3(int duration)
 {
-	timer3_counter = SCAN_DURATION / TIMER_CYCLE;
+	timer3_counter = duration / TIMER_CYCLE;
 	timer3_flag = 0;
 }
 

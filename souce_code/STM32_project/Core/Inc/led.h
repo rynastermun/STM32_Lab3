@@ -8,7 +8,7 @@
 #ifndef INC_LED_H_
 #define INC_LED_H_
 
-#include <fsm_processing.h>
+#include "main.h"
 
 #define GREEN0	GPIO_PIN_1
 #define AMBER0	GPIO_PIN_2
@@ -19,7 +19,7 @@
 
 //hiển thị led 7 đoạn
 void display7SEG(int num);
-void update7SEG();
+void update7SEG(int index);
 
 extern int valueSEG12;//Biến lưu giá trị hiển thị led 7 đoạn ở led 1 và 2
 extern int valueSEG34;//Biến lưu giá trị hiển thị led 7 đoạn ở led 3 và 4
@@ -32,4 +32,5 @@ void led_off(int pin);
 void blink_red();
 void blink_amber();
 void blink_green();
+
 #endif /* INC_LED_H_ */

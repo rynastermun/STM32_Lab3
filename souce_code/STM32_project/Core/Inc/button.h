@@ -8,7 +8,7 @@
 #ifndef INC_BUTTON_H_
 #define INC_BUTTON_H_
 
-#include <fsm_processing.h>
+#include "main.h"
 
 //THIẾT LẬP TRẠNG THÁI NHẤN
 #define NORMAL_STATE GPIO_PIN_SET

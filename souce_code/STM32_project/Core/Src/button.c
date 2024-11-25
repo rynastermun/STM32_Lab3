@@ -4,6 +4,7 @@
  *  Created on: Nov 21, 2024
  *      Author: ADMIN PC
  */
+
 #include "button.h"
 
 int KeyReg[NUM_OF_BUTTON][3]; // Mảng lưu trạng thái của 3 nút, mỗi nút có 3 trạng thái
@@ -12,7 +13,7 @@ int buttonPressDuration = 0; //Biến kiểm tra nhấn giữ
 
 void initialButton(){
 	//KHỞI TẠO CỜ VÀ TRẠNG THÁI CÁC NÚT
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < NUM_OF_BUTTON; i++) {
 	        ButtonFlag[i] = 0;
 	        for (int j = 0; j < 3; j++) {
 	            KeyReg[i][j] = NORMAL_STATE;
@@ -20,7 +21,7 @@ void initialButton(){
 	    }
 }
 
-//KIỂM TRA NÚT Duration NẾU ĐƯỢC NHẤN
+//KIỂM TRA NÚT Select NẾU ĐƯỢC NHẤN
 int isSelectPressed() {
     if (ButtonFlag[Select] == 1) {
         ButtonFlag[Select] = 0;

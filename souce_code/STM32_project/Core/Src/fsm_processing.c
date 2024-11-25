@@ -51,7 +51,8 @@ void fsm_processing(){
 		//Hiển thị số 8 trên 4 led 7 đoạn
 		valueSEG12 = 88;
 		valueSEG34 = 88;
-		//Hiển thị led 7 đoạn
+
+		//Hiển thị tất cả led
 		if (timer1_flag == 1)
 		{
 			if (Index > 3) Index = 0;
@@ -98,7 +99,7 @@ void fsm_processing(){
 					status1 = 0;
 					count1 = amberTime;
 				}
-				else if(status1 == 21){//Led xanh
+				else if(status1 == 2){//Led xanh
 					led_off(RED0);
 					led_off(AMBER0);
 					led_on(GREEN0);
